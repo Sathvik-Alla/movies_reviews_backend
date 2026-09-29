@@ -7,7 +7,11 @@ const router = express.Router()
 
 router.route('/').get(MoviesController.apiGetMovies)
 
+router.route("/id/:id").get(MoviesController.apiGetMovieById)
+
 router.route("/review")
+
+router.route("/ratings").get(MoviesController.apiGetRatings)
 
 .post(ReviewsController.apiPostReview)
 
