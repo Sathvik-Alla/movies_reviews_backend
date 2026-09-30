@@ -9,15 +9,15 @@ router.route('/').get(MoviesController.apiGetMovies)
 
 router.route("/id/:id").get(MoviesController.apiGetMovieById)
 
-router.route("/review")
+
 
 router.route("/ratings").get(MoviesController.apiGetRatings)
 
-.post(ReviewsController.apiPostReview)
-
-.put(ReviewsController.apiUpdateReview)
-
-.delete(ReviewsController.apiDeleteReview)
+router 
+  .route("/review")
+  .post(ReviewsController.apiPostReview)
+  .put(ReviewsController.apiUpdateReview)
+  .delete(ReviewsController.apiDeleteReview)
 
 
 export default router

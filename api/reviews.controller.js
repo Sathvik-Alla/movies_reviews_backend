@@ -39,7 +39,7 @@ export default class ReviewsController {
 
     var { error } = ReviewResponse
     if(error) {
-      res.status.json({error})
+      res.status(400).json({error})
     }
     if(ReviewResponse.modifiedCount === 0) {
       throw new Error ("unable to update review. User may not be original poster")
